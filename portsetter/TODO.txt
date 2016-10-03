@@ -1,0 +1,19 @@
+For CO3
+
+    Update tests to accomodate spanish input
+    The custom errors - in the CO3
+
+    TURN IN
+        Estimated dev time
+        Requirements doc
+        portsetter.cpp
+        usage and about in english and spanish
+        New spanish test code
+        readme.txt
+        Actual dev time
+
+Update tests
+    get them new files to compare to
+    add tests for the new functions
+    Spanish test code
+    //TODO: Maybe if the file does not eexist then print that the language is not available?
