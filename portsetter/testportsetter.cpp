@@ -34,6 +34,32 @@ int main(int argc, char* args[]) {
 
 	testString = "setport --port 4040";
 	test(testString.c_str(), "success.txt");
+	
+	//The CO5 test positive cases
+	testString = "setport -p -e BAR";
+	test(testString.c_str(), "fail2.txt");
+	
+	testString = "setport -p --environment BAR";
+	test(testString.c_str(), "fail2.txt");
+	
+	testString = "setport --port -e BAR";
+	test(testString.c_str(), "fail2.txt");
+	
+	testString = "setport --port --environment BAR";
+	test(testString.c_str(), "fail2.txt");
+	
+	//The CO5 test negative cases
+	testString = "setport -e BAR";
+	test(testString.c_str(), "fail2.txt");
+	
+	testString = "setport -p -environment BAR";
+	test(testString.c_str(), "fail2.txt");
+	
+	testString = "setport -port -e BAR";
+	test(testString.c_str(), "fail2.txt");
+	
+	testString = "setport --port --environment 852";
+	test(testString.c_str(), "fail2.txt");
 
 	//NEGATIVE TESTS
 	testString = "setport help";
@@ -74,6 +100,13 @@ int main(int argc, char* args[]) {
 
 	testString = "setport -P 714";
 	test(testString.c_str(), "fail2.txt");
+	
+	testString = "setport -P 714";
+	test(testString.c_str(), "fail2.txt");
+	
+	testString = "setport -P 714";
+	test(testString.c_str(), "fail2.txt");
+	
 }
 
 

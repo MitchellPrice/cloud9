@@ -4,6 +4,8 @@
 #include <cstring>
 #include <sstream>
 #include <fstream>
+#include <stdio.h> 
+#include <stdlib.h>
 
 using namespace std;
 
@@ -77,7 +79,7 @@ int main(int argc, char* args[]) {
 	string flag = "";
 	string port = "";
 	string eFlag = "";
-	char* customEnv;
+	char* BAR;
 	int portNumber = -1337;
 	string envVar;
 	int envVal;	
@@ -127,7 +129,7 @@ int main(int argc, char* args[]) {
 		}
 		//Case where a custom, specified, environment variable is used
 		if (argc == 4){
-			envVar = getenv(customEnv);
+			envVar = getenv(BAR);
 			//if the custom environment variable does not exist
 			if (envVar.c_str() == nullptr){
 				return invalidEnvVar();

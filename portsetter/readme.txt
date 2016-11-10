@@ -17,4 +17,6 @@ Read Me for portsetterTest
 
 6.The program should run at this point
 
+7. The Program can now run a parameterized environmental variable. //my due diligence
+
 *Because testportsetter uses a temporary file it should be included
